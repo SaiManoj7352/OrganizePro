@@ -6,7 +6,7 @@ export default function Progresstracker({tasks}) {
   return (
     <div className="progress-tracker">
       <p>
-        {completedTasks} of {totaltasks} tasks completed
+        {completedTasks} of {totaltasks} tasks  are completed.
       </p>
       <div className="progress-bar">
         <div
