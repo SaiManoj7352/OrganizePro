@@ -26,6 +26,9 @@ function App() {
 const deleteTask = (index) => {
   setTasks(tasks.filter((_, i) => i != index));
 }
+const clearTasks = () => {
+  setTasks([]);
+}
   return (
     <div>
       <h1>OrganizePro</h1>
@@ -35,7 +38,8 @@ const deleteTask = (index) => {
       updateTask = {updateTask}
       deleteTask = {deleteTask}/>
       <ProgressBar tasks = {tasks} />
-      <button >Clear All Tasks</button>
+      {tasks.length>0 &&
+      (<button onClick={clearTasks}>Clear All Tasks</button>)} 
     </div>
   )
 }
